@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Я WSGI проект</title>
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+          div.main{
+              margin:10px;
+          }
+          input._error{
+              box-shadow: 0 0 15px red;
+          }
+        </style>
+
+        <script src="validation.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <form name="form" id="form" action="http://127.0.0.1:8000/insert_data/" method="GET">
+                <div class="form-group form__item">
+                      <label for="second_name-text-input" class="form__label">Фамилия</label>
+                      <div>
+                          <input name="second_name" class="form-text form__input _req" type="text" id="second_name-text-input" placeholder="Введите фамилию">
+                      </div>
+                </div>
+                <div class="form-group form__item">
+                      <label for="first_name-text-input" class="form__label">Имя</label>
+                      <div>
+                          <input name="first_name" class="form-text form__input _req" type="text" id="first_name-text-input" placeholder="Введите имя">
+                      </div>
+                </div>
+                <div class="form-group form__item">
+                      <label for="patronymic-text-input" class="form__label">Отчество</label>
+                      <div>
+                          <input name="patronymic" class="form-text form__input _req" type="text" id="patronymic-text-input" placeholder="Введите отчество">
+                      </div>
+                </div>
+                <div class="form-group form__item">
+                      <label class="form__label">Регион</label>
+                      <div>
+                          <select name="region" class="form__select">
+                              <option value="Краснодарский Край" selected>Краснодарский Край</option>
+                              <option value="Ростовская область">Ростовская область</option>
+                              <option value="Ставропольский Край">Ставропольский Край</option>
+                          </select>
+                      </div>
+                </div>
+                <div class="form-group form__item">
+                      <label class="form__label">Город</label>
+                      <div>
+                          <select name="city" class="form__select">
+                              <option value="Краснодар" selected>Краснодар</option>
+                              <option value="Кропоткин">Кропоткин</option>
+                              <option value="Славянск">Славянск</option>
+                              <option value="Ростов">Ростов</option>
+                              <option value="Шахты">Шахты</option>
+                              <option value="Батайск">Батайск</option>
+                              <option value="Ставрополь">Ставрополь</option>
+                              <option value="Пятигорск">Пятигорск</option>
+                              <option value="Кисловодск">Кисловодск</option>
+                          </select>
+                      </div>
+                </div>
+              <div class="form-group form__item">
+                    <label for="telephone-tel-input" class="form__label">Телефон</label>
+                    <div>
+                        <input name="telephone" class="form-control form__input _req _telephone" type="tel" id="telephone-tel-input" placeholder="Введите телефон">
+                    </div>
+              </div>
+                <div class="form-group form__item">
+                    <label for="exampleInputEmail1" class="form__label">Электронный адрес</label>
+                    <div>
+                        <input name="email" type="email" class="form-control form__input _req _email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+                    </div>
+                </div>
+
+                <button type="submit" class="form__button">Отправить</button>
+            </form>
+        </div>
+    </body>
+</html>
+
